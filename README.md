@@ -1,4 +1,4 @@
-# Class Code Repository
+# Authoring a Website - Class Code Repository
 
 Welcome to the class GitHub repository.
 
