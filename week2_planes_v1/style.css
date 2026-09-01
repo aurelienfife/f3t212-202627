@@ -1,0 +1,32 @@
+/* This is a CSS style sheet
+ Syntax is
+ element (or #id or .class)  {
+    selector: attribute;
+    selector: attribute;
+    etc etc
+} */
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav {
+    overflow: hidden;
+    background-color: navy;
+}
+
+nav a {
+    display:block;
+    float:left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
