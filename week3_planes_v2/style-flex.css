@@ -1,0 +1,83 @@
+/* Alternative stylesheet using flexbox. */
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav {
+    background-color: navy;
+}
+
+h1.main-title {
+    text-align: center;
+}
+
+nav {
+    /* Turn nav into a flex container; its links become flex items. */
+    display: flex;
+    /* Allow links to move onto another line when space is limited. */
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+div {
+    padding: 20px;
+}
+
+.welcome {
+    /* Turn welcome into a flex container; its two divs become flex items. */
+    display: flex;
+    /* Place the image and text beside each other in one row. */
+    /* Stretch both items to the height of the taller item. */
+    align-items: stretch;
+}
+
+.welcome-image,
+.welcome-text {
+    /* Give each flex item half of the available width. */
+    width: 50%;
+    /* Include padding and borders inside the 50% width. */
+    box-sizing: border-box;
+}
+
+.welcome-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    /* Fill the column while preserving the image's proportions. */
+    object-fit: cover;
+}
+
+.welcome-text {
+    padding-left: 20px;
+}
+
+/* On screens 600px wide or less, allow the welcome items to wrap. */
+@media (max-width: 600px) {
+    .welcome {
+        /* Move an item to the next line when it no longer fits. */
+        flex-wrap: wrap;
+    }
+
+    .welcome-image,
+    .welcome-text {
+        /* Make each item fill the row on a small screen. */
+        width: 100%;
+    }
+
+    .welcome-image {
+        height: 300px;
+    }
+}

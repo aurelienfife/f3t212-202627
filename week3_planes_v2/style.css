@@ -1,0 +1,76 @@
+/* This is a CSS style sheet
+ Syntax is
+ element (or #id or .class)  {
+    selector: attribute;
+    selector: attribute;
+    etc etc
+} */
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav {
+    /* Hide overflow so the nav contains its floated links. */
+    overflow: hidden;
+    background-color: navy;
+}
+
+h1.main-title {
+    text-align: center;
+}
+
+nav a {
+    /* Move each link to the left so the links sit next to each other. */
+    float:left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+div {
+    padding: 20px;
+}
+
+/* Add an invisible table-like element after the columns. */
+/* clear: both makes the parent contain the floated columns. */
+.welcome::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+div .welcome-image {
+    /* Float the image column to the left. */
+    float: left;
+    /* Make the image column half of the available width. */
+    width: 50%;
+    /* Give both columns a shared height so their bottoms line up. */
+    height: 300px;
+    /* Include padding and borders inside the 50% width. */
+    box-sizing: border-box;
+}
+
+.welcome-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    /* Crop the image to fill its column without stretching it. */
+    object-fit: cover;
+}
+
+.welcome-text {
+    /* Float the text beside the image at the same width and height. */
+    float: left;
+    width: 50%;
+    height: 300px;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
