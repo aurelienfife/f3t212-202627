@@ -21,9 +21,26 @@ nav a:hover {
     color: black;
 }
 
-
 div {
     padding: 20px;
+}
+
+div.gallery {
+    border: 1px red solid;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.gallery-item {
+    /* make them grow/shrink at the same pace */
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 280px;
+    border: 1px blue solid;
+}
+
+div.gallery-item img {
+    width: 100%;
 }
 
 #welcome { /*welcome is an id */
@@ -61,7 +78,3 @@ footer {
     text-align: center;
     padding: 14px 16px;
 }
-
-/* img {
-    width: 10%;
-} */
