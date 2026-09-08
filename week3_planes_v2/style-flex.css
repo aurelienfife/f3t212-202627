@@ -53,6 +53,7 @@ div {
 }
 
 .welcome-image img {
+    /* Images are inline by default; block display removes the small gap below them. */
     display: block;
     width: 100%;
     height: 100%;
@@ -62,6 +63,36 @@ div {
 
 .welcome-text {
     padding-left: 20px;
+}
+
+/* Turn the gallery into a flex container. Its cards become flex items. */
+.gallery {
+    display: flex;
+    /* Allow cards to move to a new row when there is not enough space. */
+    flex-wrap: wrap;
+    /* Add 20px of space between the cards. */
+    gap: 20px;
+}
+
+/* Control the size of each gallery card. */
+.gallery-item {
+    /* Grow to fill the row, shrink if needed, and start at 280px wide. */
+    flex: 1 1 280px;
+    /* Prevent long content from forcing the card wider than its row. */
+    min-width: 0;
+    /* Keep padding and borders inside the card's width. */
+    box-sizing: border-box;
+}
+
+.gallery-item img {
+    /* Make the image a block so it fills the card without inline-image spacing. */
+    display: block;
+    /* Make each image fill the width of its card. */
+    width: 100%;
+    /* Keep all gallery images at the same width-to-height ratio. */
+    aspect-ratio: 16 / 9;
+    /* Crop extra image area instead of stretching the picture. */
+    object-fit: cover;
 }
 
 /* On screens 600px wide or less, allow the welcome items to wrap. */

@@ -59,6 +59,7 @@ div .welcome-image {
 }
 
 .welcome-image img {
+    /* Images are inline by default; block display removes the small gap below them. */
     display: block;
     width: 100%;
     height: 100%;
